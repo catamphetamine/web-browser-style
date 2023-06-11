@@ -2,4 +2,6 @@ export { default as ms } from './lib/ms.js'
 export { default as px } from './lib/px.js'
 export { default as percent } from './lib/percent.js'
 export { default as scaleFactor } from './lib/scaleFactor.js'
-
+export { default as getCssVariable } from './lib/getCssVariable.js'
+export { default as getCssVariables } from './lib/getCssVariables.js'
+export { default as getDimensionalCalculatedCssVariable } from './lib/getDimensionalCalculatedCssVariable.js'

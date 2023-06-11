@@ -20,6 +20,12 @@ npm install web-browser-style --save
 
 <!-- * `roundAndStringify(value: number, { precision: number })` — Rounds the number up to `precision` fractional digits count, and then stringifies it. `roundAsPixels()` uses this function internally with `precision: 3`. Could be used for rounding non-`px` style values like `transform: scale(1.2345...)`. -->
 
+* `getCssVariable(variableName: string): string` — Returns the value for the specified CSS variable name.
+
+* `getCssVariables(variableNames: string[]): string[]` — Returns the values for the specified CSS variable names.
+
+* `getDimensionalCalculatedCssVariable(variableName: string): string` — Returns the value for the specified CSS variable name. This function could be used in cases when a CSS variable value is defined using a `calc()` function because in those cases the standard `getCssVariable()` function will return a value with a `calc()`. For example, `getCssVariable()` could return `"calc(14px*3)"` while `getDimensionalCalculatedCssVariable()` would return `"42px"`. This function works by creating a new DOM element, inserting it into the document, measuring it and then removing it from the document.
+
 ## Test
 
 ```
